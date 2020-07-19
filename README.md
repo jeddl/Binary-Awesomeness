@@ -11,10 +11,8 @@ __NOTE__:
 that all the configuration listed here is in `jekyll` context.
 2. The section that explains how to use `bundle` to create `jekyll` project is not accurate, where one might get a bunch of errors by just following
 the `Github Pages` instruction. The best place to know how `bundle` and `jekyll` work is their websites, which are listed in the Github documentation as well.
-The main goal here is, if building a personal website, to create a `jekyll` project at the root directory, NOT `/docs` on `master` branch. (Although `/docs`
-on master branch or gh-pages branch should work as well by some specific configuration according to the `Github Pages` setup instruction. I had some trouble of
-getting `/docs` on master branch to work since when I set the project name as `jeddl.github.io` as recommended, I was not able to select which directory is my
-website root directory, unless I change my project name. But it might cause the routing incorrect)
+The main goal here is, if building a personal website, to create a `jekyll` project at the root(or `/docs`) directory. If you use root directory, everything will
+work out of the box, but if you want to work with `/docs`, you will need to modify `_config.yml` to configure the base URL.
 
 ## Potential Issues
 I highly recommend that learn some basic knowledge of `Ruby` project, `bundler`, and maybe `jekyll` before jumping right on it, especially you don't have any Ruby background(like me). The instruction from `Github Pages` seems
