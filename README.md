@@ -17,7 +17,7 @@ getting `/docs` on master branch to work since when I set the project name as `j
 website root directory, unless I change my project name. But it might cause the routing incorrect)
 
 ## Potential Issues
-I highly recommend that learn some basic knowledge of `Ruby` project, `bundler`, and maybe `jekyll` before jumping on it. The instruction from `Github Pages` seems
+I highly recommend that learn some basic knowledge of `Ruby` project, `bundler`, and maybe `jekyll` before jumping right on it, especially you don't have any Ruby background(like me). The instruction from `Github Pages` seems
 really straightforward, but there is a lot going on behind the scene.
 
 One of the possible problem that you might be dealing with is the `gem`/`bundle` directory access problem. That normally if you install `Ruby` with `sudo` command,
