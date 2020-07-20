@@ -18,6 +18,4 @@ work out of the box, but if you want to work with `/docs`, you will need to modi
 I highly recommend that learn some basic knowledge of `Ruby` project, `bundler`, and maybe `jekyll` before jumping right on it, especially you don't have any Ruby background(like me). The instruction from `Github Pages` seems
 really straightforward, but there is a lot going on behind the scene.
 
-One of the possible problem that you might be dealing with is the `gem`/`bundle` directory access problem. That normally if you install `Ruby` with `sudo` command,
-and when you try to install `bundler`, it will install gems requiring the root access. Usually you cerntainly do not want to contaminate your global environment. One of
-the solutions would be running `gem install --user-install <gemname>` where `--user-install` will store gems in the `.gem/` from user directory.
+One of the possible problems that you might be dealing with is the `gem`/`bundler` directory access problem. That normally if you install `Ruby` with `sudo` command, and when you try to install `bundler`, it will install gems requiring the root access. Usually you cerntainly do not want to contaminate your global environment. One of the solutions would be running `gem install --user-install <gemname>` where `--user-install` will store gems in the `.gem/` from user directory.
