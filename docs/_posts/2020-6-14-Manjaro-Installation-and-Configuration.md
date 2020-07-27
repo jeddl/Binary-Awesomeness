@@ -4,17 +4,17 @@ published: true
 ---
 
 
-I have wanted to install and use Arch or an Arch based Linux distro for a while. So recently I decided to try
-[Manjaro](https://manjaro.org/) Architect along with [i3](https://i3wm.org/) WM. (I have tried KDE Plasma and GNOME
-as well, but didn't quite like it as I was not trying to configure my entire Linux desktop like Mac or Windows.)
+I have wanted to try Arch or an Arch based Linux distro for a while. Recently I decided to give
+[Manjaro](https://manjaro.org/) Architect along with [i3](https://i3wm.org/) WM a shot. (I have also tried KDE Plasma and GNOME,
+but didn't quite like it as I was not trying to configure my entire Linux desktop like Mac or Windows.)
 
 The reason why I chose Manjaro Architect with i3 was:
 
-1. It is Arch based, and I really would like to try one of these rolling release distros.
+1. It is Arch based, and I really would like to experience one of these rolling release distros.
 2. It is not Arch, which means, for example the Manjaro Architect, comes with some feature pre-installed so that I didn't
    have to start from completely scratch.(Which might be really good for those who want to start from 0. And one of the advantages of
    doing it is you will absolutely know your system inside-out)
-3. i3 is fast and keyboard based, also really simple and beautiful(simple is beautiful BTW), which is exactly what
+3. i3 is fast and keyboard based, also really simple and beautiful(simple is beautiful of course), which is exactly what
    I need.
 
 ## Preparation
@@ -89,7 +89,26 @@ the steps.
 As I mentioned above, I chose Manjaro Architect. The setup process was pretty straightforward most of the time, but there were
 some tricky parts that I would like to discuss.
 
-...To Be Continued...
+#### Partitioning
+
+The partition was relatively easy regardless if you are dual booting or not. However, before partitioning your disk, make sure
+you have enough space for your Linux partition.
+
+Normally, you would have three partitions under the Linux partition: `/boot`, `/root`, and `/home`. That's pretty much enough. You also
+can just have a boot partition and the other one for the rest of the use. But in my case, I created these three partitions. I put
+1G to my `/boot` partition with the type of `FAT`, 30G to `/root`, and the rest to `/home`. Both `/root` and `/home` were using
+`EXT4` as their partition type. If you are a tensive user, meaning that if you will install
+a lot of programs, I would recommend you to increase your `/root` partition. But generally speaking, 30G is more than enough.
+I didn't create the `swap` partition as it is nowadays not really needed. But feel free to create one if you need it.
+
+#### DE and Packages
+
+You could also select your favorite desktop environment during the installation process. e.g. KDE plasma, GNOME, XFCE, i3, and
+etc. There are also tutorials on [YouTube](https://youtube.com) explaining the main process in detail. So I am not going to
+discuss each of them, as it is really case by case. You would have to know what you need, though. But one good thing about
+Manjaro Architect installation is it provides you the full and minimal installation. If you really are not sure where to start,
+choose full installation. It will preinstall some packages and libraries by default. It also provides you the opportunity to
+select which packages do you want preinstalled. Again, if you are not sure, just leave everything as default.
 
 ## Display Setup
 
@@ -100,7 +119,7 @@ size was too small for me. I needed to change the default display DPI for my new
 that I should modify. This file controls the X client applications. It has the terminal
 preferences setup, such as colors, DPIs, and other fun stuff.
 
-I set my `Xft.dpi` as 120, which worked perfectly for me.
+I set my `Xft.dpi` as 120
 
 ```
 Xft.dpi: 120
@@ -182,14 +201,14 @@ Moreover, it actually fixed the flickering screen problem! They all added up.
 I believe this article benefits not only the Manjaro users, but all other distro users as well. People in Manjaro community are
 helpful and responsive, which should be really appreciated.
 
-## Email, Calendar, and PDF Reader
+## Apps
 
 ### Neomutt
 
 I installed `Neomutt` as my mail terminal-based email application. The setup was easy. I used [mutt-wizard](https://github.com/LukeSmithxyz/mutt-wizard)
 package created by [Luke](https://lukesmith.xyz/) and it worked great.
 
-There were few optional things I did to customize it. I installed `lynx` to view the html format in terminal, and `urlview` to
+There were few things I did for customization. I installed `lynx` to view the html format in terminal, and `urlview` to
 open the links on the browser from emails. Both applications are extremely light, and they work as expected. There are, of course,
 some alternatives, and I think they are worth trying as well.
 
@@ -203,12 +222,20 @@ from `pacman`. Nice and easy. I love it's simpleness and the lightning speed.
 There are a lot of PDF readers in Linux. `Zathura` is terminal based minimal application. You can bind shortcut keys to it, but out
 of the box, it supports vim movement.
 
+### Polybar
+
+`Polybar` can be a nice alternative for i3 default status bar. There are tons of different settings you can do with it. Check their
+Github [repo](https://github.com/polybar/polybar) for the nice instruction. But basically, it provides a nice and easy, clean way
+to write bash scripts to configure the status bar.
+
 ## Resources and References
 
 1. My [dotfiles](https://github.com/jeddl/dotfiles). It will be constantly updating, as I will experiment different applications and
    environment. (I might do more research on [dwm](https://dwm.suckless.org/) and try it out.)
 
-2. Luke Smith's dotfile [repo](https://github.com/LukeSmithxyz/voidrice), I used a lot of his scripts, modified, and applied to my machine the way I wanted.
+2. [Archwiki](https://wiki.archlinux.org/). It has EVERYTHING.
 
-3. [Manjaro Forum](https://forum.manjaro.org/), where I found a bunch of useful posts and tips.
+3. Luke Smith's dotfile [repo](https://github.com/LukeSmithxyz/voidrice), I used some of his scripts.
+
+4. [Manjaro Forum](https://forum.manjaro.org/), where I found a bunch of useful posts and tips.
 
