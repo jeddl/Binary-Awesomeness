@@ -65,7 +65,7 @@ expression returns you a `List`. Choosing one over the other totally depends on 
 keep in mind that `.ToList()` is very costy. As it will turn the whole collection into an indexed
 list, and this operation is going to put everything in the list into the memory.
 Especially when you have too many elements, this operation is going to be very expensive. So
-under any circumstances, you should try to avoid using `.ToList()` whenever possible until it is really
+under any circumstances, you should try to avoid using `.ToList()` whenever possible unless it is really
 necessary.
 
 ## Method Argument Types and Method Return Type
